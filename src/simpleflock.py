@@ -4,7 +4,7 @@ import os
 import fcntl
 import errno
 
-class SimpleFlock:
+class SimpleFlock(object):
    """Provides the simplest possible interface to flock-based file locking. Intended for use with the `with` syntax. It will create/truncate/delete the lock file as necessary."""
 
    def __init__(self, path, timeout = None):
